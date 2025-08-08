@@ -1,0 +1,100 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    include "us(basic)"
+    include "level3(ralt_switch)"
+
+    // Layer Shifting (Taking A (AC01) as an example)
+    // No Modifier = ᚨ
+    // Shift + A = ᚩ
+    // RAlt + A = ᚬ
+    // Shift + RAlt = ᚭ
+
+    name[Group1] = "Runic";
+
+    key <AD01> { [ U16A6 ] }; // Q: ᚦ
+    key <AD02> { [ U16B9 ] }; // W: ᚹ
+    key <AD03> { [ U16D6 ] }; // E: ᛖ
+    key <AD04> { [ U16B1 ] }; // R: ᚱ
+    key <AD05> { // T: ᛏ/ᛐ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16CF, NoSymbol, NoSymbol, U16D0 ]
+    };
+    key <AD06> { [ U16C7 ] }; // Y: ᛇ
+    key <AD07> { // U: ᚢ/ᚣ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16A2, U16A3, NoSymbol, NoSymbol ]
+    };
+    key <AD08> { [ U16C1 ] }; // I: ᛁ
+    key <AD09> { [ U16DF ] }; // O: ᛟ
+    key <AD10> { [ U16C8 ] }; // P: ᛈ
+
+    key <AC01> { // A: ᚨ/ᚩ/ᚬ/ᚭ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16A8, U16A9, U16AC, U16AD ]
+    };
+    key <AC02> { // S: ᛊ/ᛋ/ᛌ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16CA, U16CB, NoSymbol, U16CC ]
+    };
+    key <AC03> { [ U16DE ] }; // D: ᛞ
+    key <AC04> { [ U16A0 ] }; // F: ᚠ
+    key <AC05> { [ U16B7 ] }; // G: ᚷ
+    key <AC06> { // H: ᚺ/ᚻ/ᚼ/ᚽ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16BA, U16BB, U16BC, U16BD ]
+    };
+    key <AC07> { // J: ᛃ/ᛄ/ᛅ/ᛆ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16C3, U16C4, U16C5, U16C6 ]
+    };
+    key <AC08> { // K: ᚴ/ᚵ/ᚶ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16B2, U16B3, U16B4, NoSymbol ]
+    };
+    key <AC09> { [ U16DA ] }; // L: ᛚ
+
+    key <AB01> { // Z: ᛉ/ᛦ/ᛧ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16C9, NoSymbol, U16E6, U16E7 ]
+    };
+    key <AB02> { // X: ᛜ/ᛝ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16DC, U16DD, NoSymbol, NoSymbol ]
+    };
+    key <AB03> { // C: ᚪ/ᚫ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16AA, U16AB, NoSymbol, NoSymbol ]
+    };
+    key <AB04> { // V: ᛠ/ᛡ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16E0, U16E1, NoSymbol, NoSymbol ]
+    };
+    key <AB05> { // B: ᛒ/ᛓ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16D2, NoSymbol, NoSymbol, U16D3 ]
+    };
+    key <AB06> { // N: ᚾ/ᚿ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16BE, NoSymbol, NoSymbol, U16BF ]
+    };
+    key <AB07> { // M: ᛘ/ᛙ/ᛚ
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ U16D7, NoSymbol, U16D8, U16D9 ]
+    };
+
+    // Punctuation keys with fourth-layer runes
+    key <AC10> { // ;/:/᛭
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ semicolon, colon, U16ED, NoSymbol ]
+    };
+    key <AB08> { // ,/</᛫
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ comma, less, U16EB, NoSymbol ]
+    };
+    key <AB09> { // ./>/᛬
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ period, greater, U16EC, NoSymbol ]
+    };
+
+};
