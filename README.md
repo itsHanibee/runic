@@ -1,8 +1,13 @@
 # Runic Keyboard Layout for Linux
 
-Here's a preview:
+### Here's a preview:
+
 <img width="1793" height="563" alt="preview" src="https://github.com/user-attachments/assets/4c545e31-8e3e-44ac-a38f-2c7f7ab73970" />
 
+## Automated install
+```bash
+sudo ./runic-layout.sh [install|uninstall]
+```
 
 ## Manual install instructions (Advanced):
 1. The above layout file goes in `/usr/share/X11/xkb/symbols/`
